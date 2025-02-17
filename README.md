@@ -1,149 +1,157 @@
-# Data Engineering Zoomcamp
+<p align="center">
+  <img width="100%" src="images/architecture/arch_v4_workshops.jpg" alt="Data Engineering Zoomcamp Overview">
+</p>
 
-- **Start**: 17 January 2022
-- **Registration link**: https://airtable.com/shr6oVXeQvSI5HuWD
-- Register in [DataTalks.Club's Slack](https://datatalks.club/slack.html)
-- Join the [`#course-data-engineering`](https://app.slack.com/client/T01ATQK62F8/C01FABYF2RG) channel
+<h1 align="center">
+    <strong>Data Engineering Zoomcamp: A Free 9-Week Course on Data Engineering Fundamentals</strong>
+</h1>
 
+<p align="center">
+Master the fundamentals of data engineering by building an end-to-end data pipeline from scratch. Gain hands-on experience with industry-standard tools and best practices.
+</p>
 
+<p align="center">
+<a href="https://airtable.com/shr6oVXeQvSI5HuWD"><img src="https://user-images.githubusercontent.com/875246/185755203-17945fd1-6b64-46f2-8377-1011dcb1a444.png" height="50" /></a>
+</p>
 
-## Syllabus
+<p align="center">
+<a href="https://datatalks.club/slack.html">Join Slack</a> •
+<a href="https://app.slack.com/client/T01ATQK62F8/C01FABYF2RG">#course-data-engineering Channel</a> •
+<a href="https://t.me/dezoomcamp">Telegram Announcements</a> •
+<a href="https://www.youtube.com/playlist?list=PL3MmuxUbc_hJed7dXYoJw8DoCuVHhGEQb">Course Playlist</a> •
+<a href="https://docs.google.com/document/d/19bnYs80DwuUimHM65UV3sylsCn2j1vziPOwzBwQrebw/edit?usp=sharing">FAQ</a>
+</p>
 
-> **Note**: This is preliminary and may change
+## How to Enroll
 
-### Week 1: Introduction & Prerequisites
+### 2025 Cohort
+- **Start Date**: January 13, 2025
+- **Register Here**: [Sign up](https://airtable.com/shr6oVXeQvSI5HuWD)
+- **Access Cohort Materials**: [2025 Cohort Folder](cohorts/2025/)
 
-* SQL
-* Docker and Terraform
-* [Dataset: Taxi Rides NY dataset](dataset.md)
-* Taking a first look at the data 
+### Self-Paced Learning
+All course materials are freely available for independent study. Follow these steps:
+1. Watch the course videos.
+2. Join the [Slack community](https://datatalks.club/slack.html).
+3. Refer to the [FAQ document](https://docs.google.com/document/d/19bnYs80DwuUimHM65UV3sylsCn2j1vziPOwzBwQrebw/edit?usp=sharing) for guidance.
 
-Duration: 1h
+## Syllabus Overview
+The course consists of structured modules, hands-on workshops, and a final project to reinforce your learning.
 
+### **Prerequisites**
+To get the most out of this course, you should have:
+- Basic coding experience
+- Familiarity with SQL
+- Experience with Python (helpful but not required)
 
-### Week 2: Data ingestion + data lake + exploration
+No prior data engineering experience is necessary.
 
-* Data ingestion: 2 step process
-    * Download and unpack the data
-    * Save the data to GCS
-* Data Lake (20 min)
-    * What is data lake?
-    * Convert this raw data to parquet, partition
-    * Alternatives to gcs (S3/HDFS)
-* Exploration (20 min)
-    * Taking a look at the data
-    * Data fusion => Glue crawler equivalent
-    * Partitioning
-    * Google data studio -> Dashboard
-* Terraform code for that
+### **Modules**
 
-Duration: 1h
+#### [Module 1: Containerization and Infrastructure as Code](01-docker-terraform/)
+- Introduction to GCP
+- Docker and Docker Compose
+- Running PostgreSQL with Docker
+- Infrastructure setup with Terraform
+- Homework
 
+#### [Module 2: Workflow Orchestration](02-workflow-orchestration/)
+- Data Lakes and Workflow Orchestration
+- Workflow orchestration with Kestra
+- Homework
 
-### Week 3 & 4: Batch processing (BigQuery, Spark and Airflow)
+#### [Workshop 1: Data Ingestion](cohorts/2025/workshops/dlt/README.md)
+- API reading and pipeline scalability
+- Data normalization and incremental loading
+- Homework
 
-* Data warehouse (BigQuery) (25 minutes)
-    * What is a data warehouse solution
-    * What is big query, why is so fast  (5 min)
-    * Partitoning and clustering (10 min)
-    * Pointing to a location in google storage (5 min)
-    * Putting data to big query (5 min)
-    * Alternatives (Snowflake/Redshift)
-* Distributed processing (Spark) (40 + ? minutes)
-    * What is Spark, spark cluster (5 mins)
-    * Explaining potential of Spark (10 mins)
-    * What is broadcast variables, partitioning, shuffle (10 mins)
-    * Pre-joining data (10 mins)
-    * use-case ?
-    * What else is out there  (Flink) (5 mins)
-* Orchestration tool (airflow) (30 minutes)
-    * Basic: Airflow dags (10 mins)
-    * Big query on airflow (10 mins)
-    * Spark on airflow (10 mins)
-* Terraform code for that
+#### [Module 3: Data Warehousing](03-data-warehouse/)
+- Introduction to BigQuery
+- Partitioning, clustering, and best practices
+- Machine learning in BigQuery
 
-Duration: 2h 
+#### [Module 4: Analytics Engineering](04-analytics-engineering/)
+- dbt (data build tool) with PostgreSQL & BigQuery
+- Testing, documentation, and deployment
+- Data visualization with Metabase
 
+#### [Module 5: Batch Processing](05-batch/)
+- Introduction to Apache Spark
+- DataFrames and SQL
+- Internals of GroupBy and Joins
 
-### Week 5: Analytics engineering
+#### [Module 6: Streaming](06-streaming/)
+- Introduction to Kafka
+- Kafka Streams and KSQL
+- Schema management with Avro
 
-* Basics (15 mins)
-    * What is DBT?
-    * ETL vs ELT 
-    * Data modeling
-    * DBT fit of the tool in the tech stack
-* Usage (Combination of coding + theory) (1:30-1:45 mins)
-    * Anatomy of a dbt model: written code vs compiled Sources
-    * Materialisations: table, view, incremental, ephemeral  
-    * Seeds 
-    * Sources and ref  
-    * Jinja and Macros 
-    * Tests  
-    * Documentation 
-    * Packages 
-    * Deployment: local development vs production 
-    * DBT cloud: scheduler, sources and data catalog (Airflow)
-* Extra knowledge:
-    * DBT cli (local)
+#### [Final Project](projects/)
+- Apply all concepts learned in a real-world scenario
+- Peer review and feedback process
 
-Duration: 1.5-2h    
+## Community & Support
 
-### Week 6: Streaming
+### **Getting Help on Slack**
+Join the [`#course-data-engineering`](https://app.slack.com/client/T01ATQK62F8/C01FABYF2RG) channel on [DataTalks.Club Slack](https://datatalks.club/slack.html) for discussions, troubleshooting, and networking.
 
-* Basics
-    * What is Kafka
-    * Internals of Kafka, broker
-    * Partitoning of Kafka topic
-    * Replication of Kafka topic
-* Consumer-producer
-* Streaming
-    * Kafka streams
-    * spark streaming-Transformation
-* Kafka connect
-* KSQLDB?
-* streaming analytics ???
-* (pretend rides are coming in a stream)
-* Alternatives (PubSub/Pulsar)
+To keep discussions organized:
+- Follow [our guidelines](asking-questions.md) when posting questions.
+- Review the [community guidelines](https://datatalks.club/slack/guidelines.html).
 
-Duration: 1-1.5h
+## Meet the Instructors
+- [Victoria Perez Mola](https://www.linkedin.com/in/victoriaperezmola/)
+- [Alexey Grigorev](https://linkedin.com/in/agrigorev)
+- [Michael Shoemaker](https://www.linkedin.com/in/michaelshoemaker1/)
+- [Zach Wilson](https://www.linkedin.com/in/eczachly)
+- [Will Russell](https://www.linkedin.com/in/wrussell1999/)
+- [Anna Geller](https://www.linkedin.com/in/anna-geller-12a86811a/)
 
-### Upcoming buzzwords
+Past instructors:
+- [Ankush Khanna](https://linkedin.com/in/ankushkhanna2)
+- [Sejal Vaidya](https://www.linkedin.com/in/vaidyasejal/)
+- [Irem Erturk](https://www.linkedin.com/in/iremerturk/)
+- [Luis Oliveira](https://www.linkedin.com/in/lgsoliveira/)
 
-* Delta Lake/Lakehouse
-    * Databricks
-    * Apache iceberg
-    * Apache hudi
-* Data mesh
+## Sponsors & Supporters
+A special thanks to our course sponsors for making this initiative possible!
 
-Duration: 10 mins
+<p align="center">
+  <a href="https://kestra.io/">
+    <img height="120" src="images/kestra.svg">
+  </a>
+</p>
 
+<p align="center">
+  <a href="https://dlthub.com/">
+    <img height="90" src="images/dlthub.png">
+  </a>
+</p>
 
-### Week 7, 8 & 9: Project
+Interested in supporting our community? Reach out to [alexey@datatalks.club](mailto:alexey@datatalks.club).
 
-* Putting everything we learned to practice
+## About DataTalks.Club
 
-Duration: 2-3 weeks
+<p align="center">
+  <img width="40%" src="https://github.com/user-attachments/assets/1243a44a-84c8-458d-9439-aaf6f3a32d89" alt="DataTalks.Club">
+</p>
 
+<p align="center">
+<a href="https://datatalks.club/">DataTalks.Club</a> is a global online community of data enthusiasts. It's a place to discuss data, learn, share knowledge, ask and answer questions, and support each other.
+</p>
 
-## Architecture diagram
+<p align="center">
+<a href="https://datatalks.club/">Website</a> •
+<a href="https://datatalks.club/slack.html">Join Slack Community</a> •
+<a href="https://us19.campaign-archive.com/home/?u=0d7822ab98152f5afc118c176&id=97178021aa">Newsletter</a> •
+<a href="http://lu.ma/dtc-events">Upcoming Events</a> •
+<a href="https://calendar.google.com/calendar/?cid=ZjhxaWRqbnEwamhzY3A4ODA5azFlZ2hzNjBAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ">Google Calendar</a> •
+<a href="https://www.youtube.com/@DataTalksClub/featured">YouTube</a> •
+<a href="https://github.com/DataTalksClub">GitHub</a> •
+<a href="https://www.linkedin.com/company/datatalks-club/">LinkedIn</a> •
+<a href="https://twitter.com/DataTalksClub">Twitter</a>
+</p>
 
-<img src="images/architecture/arch_1.jpg"/>
+All the activity at DataTalks.Club mainly happens on [Slack](https://datatalks.club/slack.html). We post updates there and discuss different aspects of data, career questions, and more.
 
+At DataTalksClub, we organize online events, community activities, and free courses. You can learn more about what we do at [DataTalksClub Community Navigation](https://www.notion.so/DataTalksClub-Community-Navigation-bf070ad27ba44bf6bbc9222082f0e5a8?pvs=21).
 
-## Instructors
-
-- Ankush Khanna (https://linkedin.com/in/ankushkhanna2)
-- Sejal Vaidya (https://linkedin.com/in/vaidyasejal)
-- Victoria Perez Mola (https://www.linkedin.com/in/victoriaperezmola/)
-- Alexey Grigorev (https://linkedin.com/in/agrigorev)
-
-
-## FAQ
-
-* **Q**: At what time of the day will it happen?
-  **A**: Most likely on Mondays at 17:00 CET. But everything will be recorded, so you can watch it whenever it's convenient for you
-* **Q**: Will there be a certificate?
-  **A**: Yes, if you complete the project
-* **Q**: I'm 100% not sure I'll be able to attend. Can I still sign up?
-  **A**: Yes, please do! You'll receive all the updates and then you can watch the course at your own pace. 
-* **Q**: Do you plan to run a ML engineering course as well? **A**: Glad you asked. [We do](https://github.com/alexeygrigorev/mlbookcamp-code/tree/master/course-zoomcamp) :)

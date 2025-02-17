@@ -1,5 +1,6 @@
 
 .DS_Store
+<<<<<<< HEAD
 week_2_airflow_dbt/taxi_rides_ny/data/yellow_tripdata_2021-01.csv
 week_2_airflow_dbt/taxi_rides_ny/data/fhv_tripdata_2021-01.csv
 week_2_airflow_dbt/taxi_rides_ny/data/fhvhv_tripdata_2021-01.csv
@@ -11,3 +12,19 @@ target/
 dbt_packages/
 logs/
 # end dbt Cloud content
+=======
+.idea
+*.tfstate
+*.tfstate.*
+**.terraform
+**.terraform.lock.*
+**google_credentials.json
+**logs/
+**.env
+**__pycache__/
+.history
+**/ny_taxi_postgres_data/*
+serving_dir
+.ipynb_checkpoints/
+!week_6_stream_processing/avro_example/data/rides.csv
+>>>>>>> d50989273f3732730057345055a9cdb7b41c3685
